@@ -1,0 +1,133 @@
+.Fri {
+  font-size: 80px;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10.5rem 0;
+  margin-top: -20vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mar-bottom-small {
+  margin-bottom: 0.5rem;
+}
+
+.mar-bottom-large {
+  margin-bottom: 8rem;
+}
+
+.primary-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(20deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.content {
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+  width: 80%;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-bottom: 2rem;
+  }
+}
+
+.main {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.para {
+  font-size: 1.2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-bottom: 1px solid #55c57a;
+    padding: 2px;
+    color: #55c57a;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: #55c57a;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.15);
+  }
+}
+
+.imgs {
+  position: relative;
+  transition: all 0.2sec;
+
+  .composition_photo {
+    width: 255px;
+    aspect-ratio: 1;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    outline-offset: 1rem;
+
+    &:hover {
+      border-radius: 0px;
+      outline: 1rem solid #55c57a;
+      box-shadow: 0 2.5rem 4rem rgba($color: #000000, $alpha: 0.5);
+      transform: scale(1.05) translateY(-3rem);
+      z-index: 20;
+    }
+  }
+
+  .composition_photo_p1 {
+    top: 20px;
+    left: -20px;
+  }
+  .composition_photo_p2 {
+    bottom: 2px;
+    left: -100px;
+  }
+  .composition_photo_p3 {
+    top: 0px;
+    right: 2px;
+    z-index: 9;
+  }
+
+  &:hover .composition_photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}

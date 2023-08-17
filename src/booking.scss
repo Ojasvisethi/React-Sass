@@ -1,0 +1,113 @@
+$light-green: #7ed56f;
+$medium-green: #55c57a;
+$dark-green: #28b485;
+
+.text-center {
+  text-align: center;
+}
+
+.mar-bottom-small {
+  margin-bottom: 0.5rem;
+}
+.margin-bottom-medium {
+  margin-bottom: 2.5rem;
+}
+
+.mar-bottom-large {
+  margin-bottom: 8rem;
+}
+
+.primary-heading1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.booking {
+  padding: 10rem 0;
+  position: relative;
+  background-image: linear-gradient(to right bottom, $light-green, $dark-green);
+}
+
+.bookingbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(white, 0.879) 0%,
+      rgba(white, 0.879) 52%,
+      transparent 52%
+    ),
+    url("/nat-10.jpg");
+  height: 30rem;
+  aspect-ratio: 2;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
+  background-size: cover;
+
+  &_form {
+    width: 50%;
+    padding: 4rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 4rem;
+  padding-bottom: 0rem;
+  transition: all 1s;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  &_input {
+    width: 100%;
+    font-size: 1.3rem;
+    height: 30px;
+    border: none;
+    padding: 1.4rem;
+    transition: all 0.2s;
+
+    &::-webkit-input-placeholder {
+      color: #999;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $medium-green;
+    }
+    &:focus:invalid {
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #ff7730;
+    }
+  }
+  &_label {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+    opacity: 1;
+    transform: translate(0);
+    transition: all 0.8s;
+  }
+  &_input:placeholder-shown + &_label {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+}
